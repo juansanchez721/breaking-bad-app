@@ -27,10 +27,10 @@ debugger
     }
 
     return (
-        <div>
+        <div className="search-bar" >
             <h1>Search Character here
             </h1>
-            <input type="text" onChange={update} />
+            <input className='input-field' type="text" onChange={update} />
             <div className="text-above-items" >
 
             <h2>there are {results.length} noted characters</h2>

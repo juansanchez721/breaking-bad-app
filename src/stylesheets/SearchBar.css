@@ -2,3 +2,18 @@
     /* background-color: blue; */
     text-align: left;
 }
+
+.search-bar {
+    background-color: seagreen;
+    height: 200px;
+    padding-top: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.input-field {
+    /* width: 50%; */
+    margin: 0px 15%;
+}

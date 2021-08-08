@@ -51,8 +51,45 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center top;
 }
 
 .result-item h1 {
-    font-size: 24px;
+    font-size: 18px;
+}
+
+.character-sub-heading {
+    display: flex;
+    /* background-color: blue; */
+    font-size: 12px;
+    width: 90%;
+    height: 10%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.name {
+    /* background-color: salmon; */
+    height: fit-content;
+    text-align: start;
+    /* width: ; */
+}
+
+.status {
+    /* background-color: red; */
+    color: seagreen;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.status i {
+    font-size: 14px;
+    margin-right: 7px;
+}
+.deceased {
+    color: red
 }

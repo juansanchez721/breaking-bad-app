@@ -2,7 +2,12 @@ import React from 'react'
 
 export const ResultItem = ({character}) => {
 
-
+    const userStatusSymbol = 
+    character.status === 'Alive' 
+    ? 
+    <i className="fas fa-user-alt"></i> 
+    : 
+    <i className="fas fa-skull-crossbones"></i>
 
 
     return (
@@ -11,7 +16,18 @@ export const ResultItem = ({character}) => {
 
             <img src={character.img} />
             </div>
-            <h1> {character.name} </h1>
+            <div className="character-sub-heading" >
+                <div className="name" >
+                <h1> {character.name.toUpperCase()} </h1>
+
+                </div>
+                <div className={`status ${character.status === "Alive" ? '' : 'deceased'}`}>
+
+                {userStatusSymbol}
+                <h2>{character.status.toUpperCase()}</h2>
+                </div>
+                {/* <br/> */}
+            </div>
         </div>
     )
 
