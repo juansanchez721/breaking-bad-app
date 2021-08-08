@@ -1,15 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { useState, useEffect } from 'react'
-import { fetchResults } from '../actions/results_actions'
+import { fetchResults, fetchAllUsers, removeResults } from '../actions/results_actions'
+import '../stylesheets/SearchBar.css'
 
-function SearchBar( {fetchResults})  {
+function SearchBar( {fetchResults, removeResults, fetchAllUsers, results})  {
 
     const [userInput, setInput] = useState('')
 
     useEffect(() => {
         debugger
          if(userInput.length > 0)fetchResults(userInput)
+        debugger
+         if(userInput.length === 0) fetchAllUsers()
+debugger
         // return () => {
             // userInput
         // }
@@ -27,8 +31,12 @@ function SearchBar( {fetchResults})  {
             <h1>Search Character here
             </h1>
             <input type="text" onChange={update} />
+            <div className="text-above-items" >
 
-            <h1> {userInput} </h1>
+            <h2>there are {results.length} noted characters</h2>
+            </div>
+
+            {/* <h1> {userInput} </h1> */}
         </div>
     )
 
@@ -38,14 +46,16 @@ function SearchBar( {fetchResults})  {
 
 const MSTP = (state) => {
     return {
-        // results: state.results
+        results: state.results
     }
 }
 
 const MDTP = (dispatch) => {
     debugger
     return {
-        fetchResults: (entity) =>  dispatch(fetchResults(entity))
+        fetchResults: (entity) =>  dispatch(fetchResults(entity)),
+        removeResults: () => dispatch(removeResults()),
+        fetchAllUsers: () => dispatch(fetchAllUsers())
     }
 }
 

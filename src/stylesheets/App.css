@@ -1,5 +1,18 @@
 .App {
   text-align: center;
+  /* background-color: black; */
+  display: flex;
+  justify-content: center;
+  /* height: 100%; */
+  /* width: 100%; */
+}
+
+.inner-app {
+  /* background-color: brown; */
+  min-width: 960px;
+  max-width: 1240px;
+  height: fit-content;
+  padding-bottom: 75px;
 }
 
 .App-logo {

@@ -7,9 +7,12 @@ function App({ store }) {
   return (
     <Provider store={store} > 
 
-    <div className="App">
+    <div className="App"> 
+    <div className="inner-app">
+
       <SearchBar />
       <DisplayResults />
+    </div>
     </div>
       </Provider>
   );
