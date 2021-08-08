@@ -24,7 +24,8 @@ function SearchBar( {fetchResults})  {
 
     return (
         <div>
-            <h1>This is the SearchBar</h1>
+            <h1>Search Character here
+            </h1>
             <input type="text" onChange={update} />
 
             <h1> {userInput} </h1>
