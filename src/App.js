@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import SearchBar  from './components/SearchBar';
 import DisplayResults from './components/DisplayResults'
-import './App.css';
+import './stylesheets/App.css';
 
 function App({ store }) {
   return (

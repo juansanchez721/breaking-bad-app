@@ -9,7 +9,7 @@ function SearchBar( {fetchResults})  {
 
     useEffect(() => {
         debugger
-         if(userInput.length > 3 )fetchResults(userInput)
+         if(userInput.length > 0)fetchResults(userInput)
         // return () => {
             // userInput
         // }
